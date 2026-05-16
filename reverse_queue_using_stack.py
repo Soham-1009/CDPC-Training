@@ -50,7 +50,6 @@ class Queue:
         print(self.queue[self.rear])
 
 
-
 if __name__ == "__main__":
     obj = Queue()
     while True:
