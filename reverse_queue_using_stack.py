@@ -1,5 +1,3 @@
-import sys
-
 class Queue:
     def __init__(self):
         self.queue = []
@@ -42,12 +40,11 @@ class Queue:
             for i in range(1, self.rear + 1):
                 self.queue[i - 1] = self.queue[i]
             self.rear -= 1
-            
+
         return ele
 
     def peek(self):
         print(self.queue[self.rear])
-import sys
 
 class Stack:
     def __init__(self):
@@ -77,36 +74,17 @@ class Stack:
         if self.isEmpty():
             print("stack is empty")
         else:
-            el=self.stack[self.top]
+            ele = self.stack[self.top]
             self.stack.pop()
-            self.top-=1
+            self.top -= 1
         return ele
 
     def peek(self):
-        print(self.top)
-
-
-if __name__ == "__main__":
-    obj = Stack()
-    while True:
-        print("1. Push")
-        print("2. Pop")
-        print("3. Peek")
-        print("4. Traverse")
-        print("0. Exit")
-        ch = int(input("Select any Choice: "))
-        if ch == 1:
-            ele = int(input("Enetr Data: "))
-            obj.push(ele)
-        elif ch == 2:
-            obj.pop()
-        elif ch == 3:
-            obj.peek()
-        elif ch == 4:
-            obj.traverse()
-        elif ch == 0:
-            sys.exit(0)
-
+        if self.isEmpty():
+            print("stack is empty")
+        else:
+            print(self.stack[self.top])
+            
 if __name__ == "__main__":
     obj = Queue()
     while True:
@@ -126,4 +104,37 @@ if __name__ == "__main__":
         elif ch == 4:
             obj.traverse()
         elif ch == 0:
-            sys.exit(0)
+            pass
+
+    obj = Stack()
+    while True:
+        print("1. Push")
+        print("2. Pop")
+        print("3. Peek")
+        print("4. Traverse")
+        print("0. Exit")
+        ch = int(input("Select any Choice: "))
+        if ch == 1:
+            ele = int(input("Enetr Data: "))
+            obj.push(ele)
+        elif ch == 2:
+            obj.pop()
+        elif ch == 3:
+            obj.peek()
+        elif ch == 4:
+            obj.traverse()
+        elif ch == 0:
+            pass
+
+    obj1 = Queue()
+    obj2 = Stack()
+    for i in range(obj1.CAPACITY):
+        ele = int(input("Enter Element: "))
+        obj1.insert(ele)
+    for x in range(obj1.CAPACITY):
+        ele = obj1.delete()
+        obj2.push(ele)
+    for x in range(obj1.CAPACITY):
+        ele = obj2.pop()
+        obj1.insert(ele)
+    obj1.traverse()

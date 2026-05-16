@@ -28,7 +28,7 @@ class Stack:
         if self.isEmpty():
             print("stack is empty")
         else:
-            el=self.stack[self.top]
+            ele=self.stack[self.top]
             self.stack.pop()
             self.top-=1
         return ele
