@@ -31,7 +31,7 @@ class Stack:
             el=self.stack[self.top]
             self.stack.pop()
             self.top-=1
-        return ele
+        return el
 
     def peek(self):
         print(self.top)
