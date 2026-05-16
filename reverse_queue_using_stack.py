@@ -49,11 +49,6 @@ class Queue:
     def peek(self):
         print(self.queue[self.rear])
 
-    # def peek(self):
-    #     if self.isEmpty():
-    #         print("queue is empty")
-    #     else:
-    #         print(self.rear)
 
 
 if __name__ == "__main__":
