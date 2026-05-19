@@ -53,4 +53,4 @@ if __name__ == "__main__":
         print(f"Target {target} found at index: {result}")
     else:
         print(f"Target {target} not found")
-
+
