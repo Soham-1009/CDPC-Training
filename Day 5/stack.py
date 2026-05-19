@@ -34,7 +34,7 @@ class Stack:
         return ele
 
     def peek(self):
-        print(self.top)
+        print(self.stack[self.top])
 
 
 if __name__ == "__main__":
